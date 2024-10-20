@@ -1,11 +1,68 @@
 body{
     margin:0;
     padding: 0;
-}
-#menu{
-    box-sizing: border-box;
-    margin: 0px 50% 0px 50%;
-    width: 200px;
-    font-size: xx-large;
 
+}
+*{
+    box-sizing: border-box;
+}
+ .container{
+    background-color: antiquewhite;
+    position: absolute;
+    padding: 20px;
+    gap: 10px;
+ }  
+.section{
+    border: 1px solid black;
+    position: relative;
+    padding: 20px;
+
+    margin-bottom: 20px;
+    background-color: #e59898;
+}
+ .section-title{
+    background-color: turquoise;
+    position: absolute;
+    text-align: center;
+    width: 17%;
+    height: 17%;
+    right: 0;
+    top:0;
+
+ }
+ h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+@media(min-width: 992px){
+    .section {
+        float: left;
+        width: calc(33.33% - 10px); /* Вычитаем 10px для отступа между элементами */
+        margin-right: 10px;          /* Горизонтальный отступ между секциями */
+    }
+
+    /* Убираем отступ у последней секции */
+    .section:nth-child(3) {
+        margin-right: 0;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 10px); /* Вычитаем 10px для отступа между элементами */
+        float: left;
+        margin-right: 20px;      
+    }
+
+    .section:nth-child(2) {
+        margin-right: 0;         
+    }
+
+    .section:nth-child(3) {
+        clear: both;
+        width: 100%;
+        margin-right: 0;        
+    }
 }
