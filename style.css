@@ -1,68 +1,121 @@
-body{
-    margin:0;
+/* Общие стили */
+body {
+    margin: 0;
     padding: 0;
-
+    font-family: Arial, sans-serif;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
- .container{
-    background-color: antiquewhite;
-    position: absolute;
-    padding: 20px;
-    gap: 10px;
- }  
-.section{
-    border: 1px solid black;
-    position: relative;
-    padding: 20px;
 
-    margin-bottom: 20px;
-    background-color: #e59898;
-}
- .section-title{
-    background-color: turquoise;
-    position: absolute;
-    text-align: center;
-    width: 17%;
-    height: 17%;
-    right: 0;
-    top:0;
-
- }
- h1 {
+h1 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-@media(min-width: 992px){
+/* Контейнер */
+.container {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Блоки секций */
+.section {
+    border: 1px solid black;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e59898;
+    width: 100%; /* По умолчанию — занимает всю ширину */
+}
+
+/* Заголовки секций */
+.section-title {
+    background-color: turquoise;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    right: 0;
+    top: 0;
+}
+
+/* Гамбургер-меню */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #802929;
+}
+
+/* Стили мобильного меню */
+.mobile-menu {
+    display: none;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #802929;
+    font-weight: bold;
+}
+
+/* Адаптивные стили */
+
+/* Большие экраны (десктоп) */
+@media (min-width: 992px) {
     .section {
-        float: left;
-        width: calc(33.33% - 10px); /* Вычитаем 10px для отступа между элементами */
-        margin-right: 10px;          /* Горизонтальный отступ между секциями */
+        width: calc(33.33% - 10px); /* 3 колонки */
     }
 
-    /* Убираем отступ у последней секции */
     .section:nth-child(3) {
         margin-right: 0;
     }
 }
 
-@media(min-width: 768px) and (max-width: 991px) {
+/* Средние экраны (планшеты) */
+@media (min-width: 768px) and (max-width: 991px) {
     .section {
-        width: calc(50% - 10px); /* Вычитаем 10px для отступа между элементами */
-        float: left;
-        margin-right: 20px;      
-    }
-
-    .section:nth-child(2) {
-        margin-right: 0;         
+        width: calc(50% - 10px); /* 2 колонки */
     }
 
     .section:nth-child(3) {
+        width: 100%; /* Последний блок занимает всю ширину */
         clear: both;
-        width: 100%;
-        margin-right: 0;        
+    }
+}
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 767px) {
+
+    .menu-toggle {
+        display: block; /* Показываем гамбургер-меню */
+    }
+
+    .mobile-menu.active {
+        display: block; /* Отображаем меню, если оно активно */
     }
 }

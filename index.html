@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Module 2 Solution</title>
+    <title>Our Menu</title>
 </head>
 <body>
-    <h1>Our Menu</h1>
-    <div class="container">
-        <div class="section">
-            <div class="section-title">Chicken</div>
-            <p>Juicy and crispy fried chicken, seasoned to perfection and served with a side of your favorite sauce.</p>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Beef</div>
-            <p>Succulent grilled beef, marinated in a rich blend of spices, served with roasted vegetables and a choice of sauce.</p>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Sushi</div>
-            <p>Traditional Japanese sushi rolls made with fresh fish, vinegared rice, and a variety of delicious toppings.</p>
-        </div>
-        
+<h1>Our Menu</h1>
+<div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<nav class="mobile-menu">
+    <ul>
+        <li><a href="#chicken">Chicken</a></li>
+        <li><a href="#beef">Beef</a></li>
+        <li><a href="#sushi">Sushi</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="section" id="chicken">
+        <div class="section-title">Chicken </div>
+        <p>Juicy and crispy fried chicken, seasoned to perfection and served with a side of your favorite sauce.</p>
     </div>
+
+    <div class="section" id="beef">
+        <div class="section-title">Beef</div>
+        <p>Succulent grilled beef, marinated in a rich blend of spices, served with roasted vegetables and a choice of sauce.</p>
+    </div>
+
+    <div class="section" id="sushi">
+        <div class="section-title">Sushi</div>
+        <p>Traditional Japanese sushi rolls made with fresh fish, vinegared rice, and a variety of delicious toppings.</p>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
