@@ -56,13 +56,13 @@ for (/* fill in parts of the 'for' loop to loop over names array */ let name in 
   // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
   // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
   // name in the loop.
-  let firstLetter = name.charAt(0).toLowerCase();
+  let firstLetter = names[name].charAt(0).toLowerCase();
   if (/* fill in condition here */ firstLetter === 'j') {
     // byeSpeaker.xxxx
-   ByeName.speak(name)
+   ByeName.speak(names[name]);
 
   } else {
-    HelloName.speak(name)
+    HelloName.speak(names[name]);
     // helloSpeaker.xxxx
   }
 }
