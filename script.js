@@ -60,7 +60,6 @@ for (/* fill in parts of the 'for' loop to loop over names array */ let name in 
   if (/* fill in condition here */ firstLetter === 'j') {
     // byeSpeaker.xxxx
    ByeName.speak(names[name]);
-
   } else {
     HelloName.speak(names[name]);
     // helloSpeaker.xxxx
